@@ -6,7 +6,9 @@ Clang Core Library For kyorohiro/cgame
 
 - Reference Counter Object
 - Inheritance
-- Basic Collection
+- Collection
+- Exception
+- TODO Thread
 
 
 ## Rel
