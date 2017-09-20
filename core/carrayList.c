@@ -17,7 +17,7 @@ CArrayList* newCArrayList(CMemory* cmemory) {
 }
 
 CArrayList* initCArrayList(CArrayList *obj, int max) {
-  initCObject((CObject*)obj, CcarrayList_NAME);
+  initCObject((CObject*)obj, CArrayList_NAME);
   obj->length = 0;
   obj->max = max;
   obj->objects = (CObject**) cmemory_calloc(obj->parent.cmemory,max, sizeof(CObject*));
