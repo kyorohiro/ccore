@@ -17,4 +17,7 @@
 #define COBJECT_NAME "obj"
 
 #define COBJECTMANAGER_NAME "omg"
+
+#define CSTRING_NAME "str"
+
 #endif

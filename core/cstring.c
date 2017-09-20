@@ -3,10 +3,6 @@
 #include <stdio.h>
 
 
-// for util
-//#include "cbytes.h"
-//#include "cbytesBuilder.h"
-
 void _freeCString(void* obj);
 
 CString* newCString(CMemory* cmemory) {
@@ -14,6 +10,14 @@ CString* newCString(CMemory* cmemory) {
   ret->parent.cmemory = cmemory;
   ret->parent.funcFree = _freeCString;
   return ret;
+}
+
+CString* createCString(char *value) {
+  return initCString(newCString(getCMemory()), value);
+}
+
+CString* createCStringWithLength(char *value, int byteLength) {
+  return initCStringWithLength(newCString(getCMemory()), value, byteLength);
 }
 
 void _freeCString(void* obj) {
