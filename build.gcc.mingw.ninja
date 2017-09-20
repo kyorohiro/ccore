@@ -1,0 +1,25 @@
+#
+#
+#
+
+sep = /
+cmd = cmd /c
+objExt= o
+appExt= exe
+exaExt = exe
+objLib = a
+cc = cc
+ar = ar
+
+
+rule obj
+  command=${cmd} ${cc} -c $in -o $out -I.. -I. -O2  -Wmacro-redefined
+rule test
+  command=${cmd} ${cc} $in -o $out 
+rule lib
+  command=${cmd} ${ar} rcs $out $in
+
+
+#
+# core
+subninja core${sep}build.ninja
