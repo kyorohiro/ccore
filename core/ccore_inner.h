@@ -8,6 +8,6 @@
 #define CEVENT_NAME "eve"
 #define CEVENT_OBSERVER_NAME "evo"
 #define CEVENT_DISPATCHER_NAME "evd"
-
+#define CEXCEPT_NAME "cex"
 
 #endif
