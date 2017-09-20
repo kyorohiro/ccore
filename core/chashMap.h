@@ -1,6 +1,6 @@
 
-#ifndef _H_HASHMAP
-#define _H_HASHMAP
+#ifndef _H_CHashMap
+#define _H_CHashMap
 
 #include "ccore_inner.h"
 #include "cmemory.h"

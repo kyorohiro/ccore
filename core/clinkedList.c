@@ -26,6 +26,9 @@ CLinkedList* initCLinkedList(CLinkedList *obj) {
   return obj;
 }
 
+CLinkedList* createCLinkedList() {
+  return initCLinkedList(newCLinkedList(getCMemory()));
+}
 void freeCLinkedList(void* obj) {
   if(obj == NULL) {
     return;

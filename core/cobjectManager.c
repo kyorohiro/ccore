@@ -17,6 +17,10 @@ CObjectManager* initCObjectManager(CObjectManager *obj) {
   return obj;
 }
 
+CObjectManager* createCObjectManager() {
+  return initCObjectManager(newCObjectManager(getCMemory()));
+}
+
 void freeCObjectManager(void* obj) {
   free(((CObjectManager*)obj)->objects);
   freeCObject((CObject*)obj);

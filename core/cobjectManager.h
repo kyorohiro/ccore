@@ -1,10 +1,12 @@
-#ifndef _H_COBJECT_MANAGER
-#define _H_COBJECT_MANAGER
+#ifndef _H_CObjectManager
+#define _H_CObjectManager
+
+#include "ccore_inner.h"
 #include "cobject.h"
 #include "carrayList.h"
 #include "cmemory.h"
 
-#define COBJECTMANAGER_NAME "omg"
+
 
 typedef struct {
   CObject parent;
@@ -13,6 +15,7 @@ typedef struct {
 
 CObjectManager* newCObjectManager(CMemory *mem);
 CObjectManager* initCObjectManager(CObjectManager *obj);
+CObjectManager* createCObjectManager();
 CObjectManager* cobjectManager_addObject(CObjectManager *obj, CObject *item);
 CObjectManager* cobjectManager_releaseAll(CObjectManager *obj);
 CObjectManager* cobjectManager_releaseObject(CObjectManager *obj, CObject *item);

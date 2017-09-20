@@ -1,5 +1,5 @@
-#ifndef _H_CEXCEPT
-#define _H_CEXCEPT
+#ifndef _H_CException
+#define _H_CException
 
 #include "ccore_inner.h"
 #include "cmemory.h"

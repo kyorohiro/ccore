@@ -11,5 +11,10 @@
 #define CEXCEPT_NAME "cex"
 #define CHASHMAP_NAME "hma"
 #define CHASHMAP_ITEM_NAME "hmi"
+#define CLINKEDLIST_NAME "lli"
 
+
+#define COBJECT_NAME "obj"
+
+#define COBJECTMANAGER_NAME "omg"
 #endif
