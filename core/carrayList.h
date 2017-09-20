@@ -1,8 +1,8 @@
 #ifndef _H_CArrayList
 #define _H_CArrayList
-#include "cobject.h"
 
-#define CcarrayList_NAME "ali"
+#include "ccore_inner.h"
+#include "cobject.h"
 
 typedef struct {
   CObject parent;
