@@ -26,8 +26,3 @@ Clang Core Library For kyorohiro/cgame
   with this work has waived all copyright and related or neighboring
   rights to this work.
 </p>
-
-
-## REF
-- Test Code about SDL and SDL2 on Emscripten and Desktop  
-  https://github.com/kyorohiro/doc_sdl2
