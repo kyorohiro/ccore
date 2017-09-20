@@ -5,13 +5,18 @@ Generated executable file is executable on browser
 to use emscripten.
 
 ## Basic Function
+
 - Reference Counter Object
 - Inheritance
 - Basic Collection
 
+## Rel
+
+- https://github.com/kyorohiro/cgame
+
+
 ## LICENSE
 
-- Other
 <p xmlns:dct="http://purl.org/dc/terms/">
   <a rel="license"
      href="http://creativecommons.org/publicdomain/zero/1.0/">
@@ -28,4 +33,3 @@ to use emscripten.
 ## REF
 - Test Code about SDL and SDL2 on Emscripten and Desktop  
   https://github.com/kyorohiro/doc_sdl2
-
