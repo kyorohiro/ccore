@@ -22,6 +22,10 @@ CEventObserver* initCEventObserver(CEventObserver* obj, CObject *context, CEvent
   return obj;
 }
 
+CEventObserver* createCEventObserver(CObject *context, CEventFuncOnEvent onEvent) {
+  return initCEventObserver(newCEventObserver(getCMemory()), context, onEvent);
+}
+
 void _freeCEventObserver(void* obj) {
   if(obj == NULL) {return;}
   CEventObserver* observerObj = obj;
@@ -46,10 +50,13 @@ CEventDispatcher* initCEventDispatcher(CEventDispatcher* obj) {
   return obj;
 }
 
+CEventDispatcher* createCEventDispatcher(CEventDispatcher* obj) {
+  return initCEventDispatcher(newCEventDispatcher(getCMemory()));
+}
+
 void _freeCEventDispatcher(void* obj) {
   if(obj == NULL) {return;}
   CEventDispatcher* dispatchObj = obj;
-//  printf(">> %d \r\n", ((CObject*)dispatchObj->observers)->reference);
   releaseCObject((CObject*)dispatchObj->observers);
   freeCObject(obj);
 }
