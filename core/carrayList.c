@@ -21,8 +21,11 @@ CArrayList* initCArrayList(CArrayList *obj, int max) {
   obj->length = 0;
   obj->max = max;
   obj->objects = (CObject**) cmemory_calloc(obj->parent.cmemory,max, sizeof(CObject*));
-//  obj->parent.funcFree = freeCArrayList;
   return obj;
+}
+
+CArrayList* createCArrayList(int max) {
+  return initCArrayList(newCArrayList(getCMemory()), max);
 }
 
 CArrayList* carrayList_openAll(CArrayList *obj) {
@@ -35,13 +38,15 @@ void freeCArrayList(void* obj) {
   if(obj == NULL) {
     return;
   }
-  CArrayList *CArrayListObj = (CArrayList *)obj;
+  CMemory* memory = cobject_getCMemory((CObject*)obj);
+  CArrayList *objArr = (CArrayList *)obj;
 
-  for(i=0; i<CArrayListObj->length;i++) {
-    carrayList_set(CArrayListObj, i, NULL);
+  int len = objArr->length;
+  for(i=0; i<len; i++) {
+    carrayList_set(objArr, i, NULL);
   }
-  if(CArrayListObj->objects != NULL) {
-    cmemory_free(CArrayListObj->parent.cmemory,CArrayListObj->objects);
+  if(objArr->objects != NULL) {
+    cmemory_free(memory, objArr->objects);
   }
   freeCObject(obj);
 }
