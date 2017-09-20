@@ -8,8 +8,10 @@ Clang Core Library For kyorohiro/cgame
 - Inheritance
 - Basic Collection
 
-## Rel
 
+## Rel
+- https://github.com/kyorohiro/ccore
+- https://github.com/kyorohiro/cvectorMath
 - https://github.com/kyorohiro/cgame
 
 
