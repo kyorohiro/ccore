@@ -22,6 +22,10 @@ CBytes* initCBytes(CBytes* obj, char *value, int length) {
   return obj;
 }
 
+CBytes* createCBytes(char *value, int length) {
+  return initCBytes(newCBytes(getCMemory()), value, length);
+}
+
 void _freeCBytes(void* obj) {
   CObject *objObj = (CObject*)obj;
   CBytes *byeObj = (CBytes*)obj;

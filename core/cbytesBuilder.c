@@ -27,6 +27,10 @@ CBytesBuilder* initCBytesBuilder(CBytesBuilder* obj){
   return obj;
 }
 
+CBytesBuilder* createCBytesBuilder(CBytesBuilder* obj) {
+  return initCBytesBuilder(newCBytesBuilder(getCMemory()));
+}
+
 CBytesBuilder* cbytesBuilder_addChars(CBytesBuilder* obj, char* v, int length) {
   clinkedList_addLast(
     obj->values,
@@ -101,4 +105,6 @@ CBytesBuilder* initCBytesBuilderFromPath(CBytesBuilder* obj, char *path) {
   return obj;
 }
 
-
+CBytesBuilder* createCBytesBuilderFromPath(CBytesBuilder* obj, char *path) {
+  return initCBytesBuilderFromPath(newCBytesBuilder(getCMemory()), path);
+}

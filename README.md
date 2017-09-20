@@ -1,4 +1,4 @@
-# CGame
+# CGame 's CCore
 
 Clang Core Library
 Generated executable file is executable on browser
