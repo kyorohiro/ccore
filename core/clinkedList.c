@@ -16,7 +16,7 @@ CLinkedList* newCLinkedList(CMemory* cmemory) {
 }
 
 CLinkedList* initCLinkedList(CLinkedList *obj) {
-  initCObject((CObject*)obj, CLINKEDLIST_NAME);
+  initCObject((CObject*)obj, CLinkedList_NAME);
   //obj->parent.funcFree = freeCLinkedList;
   obj->length = 0;
   obj->begin = (CLinkedListItem*)cmemory_calloc(obj->parent.cmemory, 1, sizeof(CLinkedListItem));

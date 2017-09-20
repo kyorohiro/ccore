@@ -11,7 +11,7 @@ CObjectManager* newCObjectManager(CMemory *mem) {
 }
 
 CObjectManager* initCObjectManager(CObjectManager *obj) {
-  initCObject((CObject *)obj, COBJECTMANAGER_NAME);
+  initCObject((CObject *)obj, CObjectManager_NAME);
   obj->objects = initCArrayList(newCArrayList(obj->parent.cmemory), 15);
   obj->parent.funcFree = freeCObjectManager;
   return obj;

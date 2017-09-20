@@ -6,18 +6,18 @@
 #define CBytesBuilder_NAME "CBytesBuilder"
 
 
-#define CEVENT_OBSERVER_NAME "evo"
-#define CEVENT_DISPATCHER_NAME "evd"
-#define CEXCEPT_NAME "cex"
-#define CHASHMAP_NAME "hma"
-#define CHASHMAP_ITEM_NAME "hmi"
-#define CLINKEDLIST_NAME "lli"
+#define CEventObserver_NAME "CEventObserver"
+#define CEventDispatcher_NAME "CEventDispatcher"
+#define CException_NAME "CException"
+#define CHashMap_NAME "CHashMap"
+#define CHashMapItem_NAME "CHashMapItem"
+#define CLinkedList_NAME "CLinkedList"
 
 
-#define COBJECT_NAME "obj"
+#define CObject_NAME "obj"
 
-#define COBJECTMANAGER_NAME "omg"
+#define CObjectManager_NAME "CObjectManager"
 
-#define CSTRING_NAME "str"
+#define CString_NAME "str"
 
 #endif

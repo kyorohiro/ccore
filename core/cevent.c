@@ -16,7 +16,7 @@ CEventObserver* newCEventObserver(CMemory* cmemory) {
 }
 
 CEventObserver* initCEventObserver(CEventObserver* obj, CObject *context, CEventFuncOnEvent onEvent) {
-  initCObject((CObject *)obj, CEVENT_OBSERVER_NAME);
+  initCObject((CObject *)obj, CEventObserver_NAME);
   obj->context = cobject_upCounter(context);
   obj->onEvent = onEvent;
   return obj;
@@ -44,7 +44,7 @@ CEventDispatcher* newCEventDispatcher(CMemory* cmemory) {
 }
 
 CEventDispatcher* initCEventDispatcher(CEventDispatcher* obj) {
-  initCObject((CObject *)obj, CEVENT_DISPATCHER_NAME);
+  initCObject((CObject *)obj, CEventDispatcher_NAME);
   CMemory* cmemory = cobject_getCMemory((CObject*)obj);
   obj->observers = initCLinkedList(newCLinkedList(cmemory));
   return obj;

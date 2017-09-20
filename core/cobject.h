@@ -26,6 +26,8 @@ typedef struct {
 CObject* newCObject(CMemory*);
 CObject* initCObject(CObject*obj, const char *name);
 CObject* initCObjectRock(CObject*obj, const char *name);
+CObject* createCObject();
+
 CObject* cobject_updateName(CObject*obj, const char *name);
 CObject* releaseCObject(CObject* obj);
 CObject* releaseForceCObject(CObject* obj);

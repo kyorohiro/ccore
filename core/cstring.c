@@ -60,7 +60,7 @@ CString* calcLength(CString* obj, char *value, int byteLengthSrc) {
 }
 
 CString* initCString(CString* obj, char *value) {
-  initCObject((CObject *)obj, CSTRING_NAME);
+  initCObject((CObject *)obj, CString_NAME);
   calcLength(obj, value, -1);
   obj->value = (char*)cmemory_calloc(obj->parent.cmemory, 1, sizeof(char)*obj->byteLength+1);
 
@@ -71,7 +71,7 @@ CString* initCString(CString* obj, char *value) {
 }
 
 CString* initCStringWithLength(CString* obj, char *value, int byteLength) {
-  initCObject((CObject *)obj, CSTRING_NAME);
+  initCObject((CObject *)obj, CString_NAME);
   calcLength(obj, value, byteLength);
   obj->value = (char*)cmemory_calloc(obj->parent.cmemory, 1, sizeof(char)*obj->byteLength+1);
   obj->parent.funcFree = _freeCString;
