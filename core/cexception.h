@@ -1,6 +1,5 @@
 #ifndef _H_CEXCEPT
 #define _H_CEXCEPT
-//typedef int (*free)(int n);
 
 #include "ccore_inner.h"
 #include "cmemory.h"

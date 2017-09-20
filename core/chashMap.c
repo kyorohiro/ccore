@@ -22,6 +22,10 @@ CHashMap* initCHashMap(CHashMap *obj, int size) {
   return obj;
 }
 
+CHashMap* createCHashMap(int size) {
+  return initCHashMap(newCHashMap(getCMemory()), size);
+}
+
 void freeCHashMap(void* obj) {
   CHashMap *mapObj = obj;
 

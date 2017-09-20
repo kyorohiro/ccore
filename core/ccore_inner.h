@@ -9,5 +9,7 @@
 #define CEVENT_OBSERVER_NAME "evo"
 #define CEVENT_DISPATCHER_NAME "evd"
 #define CEXCEPT_NAME "cex"
+#define CHASHMAP_NAME "hma"
+#define CHASHMAP_ITEM_NAME "hmi"
 
 #endif
