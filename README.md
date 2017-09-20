@@ -1,8 +1,6 @@
 # CGame 's CCore
 
-Clang Core Library
-Generated executable file is executable on browser
-to use emscripten.
+Clang Core Library For kyorohiro/cgame
 
 ## Basic Function
 
