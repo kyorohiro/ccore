@@ -17,12 +17,11 @@ sdlVersion = 1
 #
 
 rule obj
-  command=${cmd} emcc -c $in -o $out -I.. -I. -s USE_SDL=${sdlVersion} -s USE_SDL_IMAGE=${sdlVersion} -DPLATFORM_EMCC -DUSE_SDL_${sdlVersion}
-rule test
-  command=${cmd} emcc $in -o $out --embed-file core/assets/test.dat  -s USE_SDL=${sdlVersion}  -s USE_SDL_IMAGE=${sdlVersion} -DPLATFORM_EMCC -DUSE_SDL_${sdlVersion}
+  command=${cmd} emcc -c $in -o $out -I.. -I. -DPLATFORM_EMCC
 rule lib
-  command=${cmd} emcc  -static  -fno-common -DPIC $in -o $out -s USE_SDL=${sdlVersion} -s USE_SDL_IMAGE=${sdlVersion}
-
+  command=${cmd} emcc  -static  -fno-common -DPIC $in -o $out
+rule testCore
+  command=${cmd} emcc $in -o $out --embed-file core/assets/test.dat -DPLATFORM_EMCC
 #
 # core
 subninja core${sep}build.ninja

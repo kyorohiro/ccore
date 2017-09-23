@@ -16,7 +16,7 @@ rule obj
   command=${cmd} ${cc} -c $in -o $out -I.. -I. 
 rule lib
   command=${cmd} ${ar} rcs $out $in 
-rule test
+rule testCore
   command=${cmd} ${cc} $in -o $out  -L./core -lcore
 
 #
